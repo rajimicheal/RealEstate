@@ -1,0 +1,199 @@
+/* Reset default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    color: black;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+/* Animated background for the body */
+body {
+    animation: gradient 10s infinite;
+    background: linear-gradient(270deg, #be80e7, #a0e3fd, #af85fd, #ffcbe1);
+    background-size: 800% 800%;
+    color: #333; /* Default text color for readability */
+}
+
+/* Define the keyframes for the gradient animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 158, 158, 0.8);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+}
+
+/* Logo styling */
+.logo {
+    flex: 1;
+    font-size: 1.5em; /* Increase font size for logo */
+    color: #fff; /* White color for better contrast */
+}
+
+/* Navigation list styling */
+.list {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation links styling */
+.list li a {
+    margin-left: 30px;
+    font-size: 1em; /* Standardize font size */
+    color: #fff; /* White color for better contrast */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Animated Text styling */
+.animated-text {
+    text-align: center;
+    margin: 20px 0; /* Spacing around the animated text */
+    font-size: 1.5em; /* Increase font size for visibility */
+    color: #fff; /* White color for better contrast */
+    position: relative;
+    height: 2em; /* Maintain space for the animated text */
+}
+
+/* Animation keyframes for the text */
+@keyframes textSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+/* Apply the text animation */
+#animatedText {
+    animation: textSlide 10s infinite;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Products section styling */
+.products {
+    padding: 50px 100px;
+}
+
+/* Individual product styling */
+.sale {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 5%;
+    background: rgba(255, 255, 255, 0.9); /* Slight background to improve readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Product image styling */
+.img {
+    float: left;
+    margin-right: 50px;
+    max-width: 100%; /* Ensure image is responsive */
+}
+
+.info p {
+    margin-bottom: 20px;
+    line-height: 1.6; /* Improve readability with line height */
+}
+
+.info button {
+    padding: 15px;
+    width: 200px;
+    border-radius: 5%;
+    /* background-color: #ff7eb3; Button background color */ /* Button text color */
+    font-size: 1em; /* Standardize font size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover and active effects */
+}
+
+#animatedText{
+    color: white;
+}
+
+.info button:hover {
+    /* background-color: #ff6584; Change button color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.info button:active {
+    /* background-color: #ff5063; Change button color on active */
+    transform: scale(0.95); /* Slightly shrink button on active */
+}
+
+.desk {
+    margin-bottom: 30px;
+    position: relative;
+    font-size: 1.2em; /* Increase font size for headings */
+    /* color: #ff6584; Color for headings */
+}
+
+/* Product topic styling */
+.topic {
+    margin-bottom: 20px;
+    font-size: 1.4em; /* Increase font size for product titles */
+    /* color: #ff758c; Color for product titles */
+}
+
+/* Product image specific styling */
+.Pro-1 {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px; /* Larger border radius for images */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center; /* Center-align text for smaller screens */
+    }
+    .list {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .list li a {
+        margin: 10px 0;
+    }
+    .products {
+        padding: 20px;
+    }
+    .img {
+        float: none;
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+    .sale {
+        padding: 20px;
+    }
+}
